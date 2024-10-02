@@ -1,0 +1,12 @@
+RUN two containers
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
+
+Down
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
+
+Logs
+docker logs docker-practise-node-app-1 -f
+
+
+Create new volumes
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build -V
